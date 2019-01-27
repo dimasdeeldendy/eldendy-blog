@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Google Plus Followers</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style>
+body {
+  background-color:transparent;
+  margin:0;
+  padding:10px 0 0 18px;
+}
+iframe{border:0}
+</style>
+<script>
+function getQueryVariable(variable) {
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		if(pair[0] == variable){return pair[1];}
+	}
+	return(false);
+}
+var users = getQueryVariable("userid");
+var themes = getQueryVariable("theme");
+</script>
+</head>
+<body>
+<div class='gp-wrap' id='gp-wrap' title='g-plus-badge'>
+<script>
+document.write('<div class="g-person" data-action="followers" data-href="'+ users +'" data-theme="'+ themes +'" data-width="450" data-rel="author"></div>');
+</script>
+    <script type='text/javascript'>
+      (function() {
+        // this guy right here
+        document.getElementsByClassName('g-person')[0].setAttribute('data-width', document.getElementById('gp-wrap').clientWidth);
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+</div>
+</body>
+</html>

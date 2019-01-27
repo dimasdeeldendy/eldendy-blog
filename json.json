@@ -1,0 +1,16 @@
+{
+  "name": "Dimas De Eldendy",
+  "short_name": "Eldendy",
+  "description": "Eldendy Family",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "https://i.ibb.co/WKydmN1/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
